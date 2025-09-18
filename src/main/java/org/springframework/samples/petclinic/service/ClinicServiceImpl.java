@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -47,6 +48,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Vitaliy Fedoriv
  */
 @Service
+@RequiredArgsConstructor
 public class ClinicServiceImpl implements ClinicService {
 
     private PetRepository petRepository;

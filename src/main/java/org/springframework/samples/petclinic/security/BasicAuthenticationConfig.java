@@ -2,6 +2,7 @@ package org.springframework.samples.petclinic.security;
 
 import javax.sql.DataSource;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -17,9 +18,9 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true) // Enable @PreAuthorize method-level security
 @ConditionalOnProperty(name = "petclinic.security.enable", havingValue = "true")
+@RequiredArgsConstructor
 public class BasicAuthenticationConfig  {
 
-    @Autowired
     private DataSource dataSource;
 
     @Bean
